@@ -1,0 +1,16 @@
+# Copyright Broadcom, Inc. All Rights Reserved.
+# SPDX-License-Identifier: APACHE-2.0
+
+name: common
+version: 2.31.5
+
+type: library
+
+apiVersion: v2
+appVersion: 2.31.4
+
+annotations:
+  licenses: Apache-2.0
+
+description: A Library Helm Chart for grouping common logic between bitnami charts. This chart is not deployable by itself.
+home: https://www.opsolving.com
