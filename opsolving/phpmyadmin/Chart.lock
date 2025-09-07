@@ -1,9 +1,9 @@
 dependencies:
 - name: mariadb
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://opsolving.github.io/charts/
   version: 22.0.0
 - name: common
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://opsolving.github.io/charts/
   version: 2.31.4
-digest: sha256:35bd1a20c26469a89686c40688ed922d74eb299e4777f8ef7935ca27b96bbed2
-generated: "2025-08-18T16:45:08.398601+02:00"
+digest: sha256:a02b05612f8899bb2c068cbb98bfac80804b5e3ee2badde7a0e29a9fa43d15d7
+generated: "2025-09-08T01:49:53.905558+02:00"

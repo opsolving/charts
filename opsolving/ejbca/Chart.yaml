@@ -10,12 +10,12 @@ appVersion: 9.1.1
 dependencies:
 - condition: mariadb.enabled
   name: mariadb
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://opsolving.github.io/charts/
   tags:
   - ejbca-database
   version: 22.x.x
 - name: common
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://opsolving.github.io/charts/
   tags:
   - bitnami-common
   version: 2.x.x

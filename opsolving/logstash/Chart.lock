@@ -1,6 +1,6 @@
 dependencies:
 - name: common
-  repository: oci://registry-1.docker.io/bitnamicharts
+  repository: https://opsolving.github.io/charts/
   version: 2.31.4
-digest: sha256:fc442e77200e1914dd46fe26490dcf62f44caa51db673c2f8e67d5319cd4c163
-generated: "2025-08-13T07:54:42.197210971Z"
+digest: sha256:4ffebcb07ef2bbcec21b53a631916e1f48b6c2df7d5bb04f2d75baabe126ae80
+generated: "2025-09-08T01:49:32.969939+02:00"
