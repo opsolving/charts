@@ -62,8 +62,8 @@ CUTOFF="2025-08-27T23:59:59Z"
     " \
   | sort -k1 ) \
 | column -ts $'\t' \
-    | grep -Ei "redis-cluster|redis|phpmyadmin|kafka|zookeeper|logstash|rabbitmq|redpanda|keycloak|keydb|tomcat|wildfly|openldap|ejbca|cassandra|memcached|nginx" \
-    | grep -Eiv "rabbitmq-cluster-operator|nginx-ingress-controller"
+    | grep -Ei "redis-cluster|redis|phpmyadmin|kafka|zookeeper|logstash|rabbitmq|redpanda|keycloak|keydb|tomcat|wildfly|openldap|ejbca|cassandra|memcached|nginx|mariadb|postgresql" \
+    | grep -Eiv "rabbitmq-cluster-operator|nginx-ingress-controller|postgresql-ha|mariadb-galera"
 ```
 
 For details on third-party licenses, see the `LICENSE.md` file inside each
