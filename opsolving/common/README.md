@@ -1,6 +1,6 @@
-# Bitnami Common Library Chart
+# Opsolving Common Library Chart
 
-A [Helm Library Chart](https://helm.sh/docs/topics/library_charts/#helm) for grouping common logic between Bitnami charts.
+A [Helm Library Chart](https://helm.sh/docs/topics/library_charts/#helm) for grouping common logic between Opsolving charts.
 
 ## TL;DR
 
@@ -8,7 +8,7 @@ A [Helm Library Chart](https://helm.sh/docs/topics/library_charts/#helm) for gro
 dependencies:
   - name: common
     version: 2.x.x
-    repository: oci://registry-1.docker.io/bitnamicharts
+    repository: oci://registry-1.docker.io/opsolvingcharts
 ```
 
 ```console
@@ -23,19 +23,6 @@ metadata:
 data:
   myvalue: "Hello World"
 ```
-
-Looking to use our applications in production? Try [VMware Tanzu Application Catalog](https://bitnami.com/enterprise), the commercial edition of the Bitnami catalog.
-
-## ⚠️ Important Notice: Upcoming changes to the Bitnami Catalog
-
-Beginning August 28th, 2025, Bitnami will evolve its public catalog to offer a curated set of hardened, security-focused images under the new [Bitnami Secure Images initiative](https://news.broadcom.com/app-dev/broadcom-introduces-bitnami-secure-images-for-production-ready-containerized-applications). As part of this transition:
-
-- Granting community users access for the first time to security-optimized versions of popular container images.
-- Bitnami will begin deprecating support for non-hardened, Debian-based software images in its free tier and will gradually remove non-latest tags from the public catalog. As a result, community users will have access to a reduced number of hardened images. These images are published only under the “latest” tag and are intended for development purposes
-- Starting August 28th, over two weeks, all existing container images, including older or versioned tags (e.g., 2.50.0, 10.6), will be migrated from the public catalog (docker.io/bitnami) to the “Bitnami Legacy” repository (docker.io/bitnamilegacy), where they will no longer receive updates.
-- For production workloads and long-term support, users are encouraged to adopt Bitnami Secure Images, which include hardened containers, smaller attack surfaces, CVE transparency (via VEX/KEV), SBOMs, and enterprise support.
-
-These changes aim to improve the security posture of all Bitnami users by promoting best practices for software supply chain integrity and up-to-date deployments. For more details, visit the [Bitnami Secure Images announcement](https://github.com/bitnami/containers/issues/83267).
 
 ## Introduction
 
@@ -204,7 +191,7 @@ registry:
 repository:
   type: string
   description: Repository and image name
-  example: bitnami/nginx
+  example: opsolving/nginx
 
 tag:
   type: string
@@ -228,7 +215,7 @@ debug:
 
 ## An instance would be:
 # registry: docker.io
-# repository: bitnami/nginx
+# repository: opsolving/nginx
 # tag: 1.16.1-debian-10-r63
 # pullPolicy: IfNotPresent
 # debug: false
@@ -260,14 +247,14 @@ size:
 path:
   type: string
   description: Path to be persisted.
-  example: /bitnami
+  example: /opsolving
 
 ## An instance would be:
 # enabled: true
 # storageClass: "-"
 # accessMode: ReadWriteOnce
 # size: 8Gi
-# path: /bitnami
+# path: /opsolving
 ```
 
 ### ExistingSecret
@@ -356,7 +343,7 @@ helm install test mychart --set path.to.value00="",path.to.value01=""
 
 - Previous versions of this Helm Chart use `apiVersion: v1` (installable by both Helm 2 and 3), this Helm Chart was updated to `apiVersion: v2` (installable by Helm 3 only). [Here](https://helm.sh/docs/topics/charts/#the-apiversion-field) you can find more information about the `apiVersion` field.
 - Use `type: library`. [Here](https://v3.helm.sh/docs/faq/#library-chart-support) you can find more information.
-- The different fields present in the *Chart.yaml* file has been ordered alphabetically in a homogeneous way for all the Bitnami Helm Charts
+- The different fields present in the *Chart.yaml* file has been ordered alphabetically in a homogeneous way for all the Opsolving Helm Charts
 
 #### Considerations when upgrading to this version
 
