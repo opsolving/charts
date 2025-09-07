@@ -25,7 +25,7 @@ global:
   ##
   security:
     ## @param global.security.allowInsecureImages Allows skipping image verification
-    allowInsecureImages: false
+    allowInsecureImages: true
   ## Compatibility adaptations for Kubernetes platforms
   ##
   compatibility:
@@ -94,7 +94,7 @@ diagnosticMode:
 ##
 image:
   registry: docker.io
-  repository: bitnami/zookeeper
+  repository: bitnamilegacy/zookeeper
   tag: 3.9.3-debian-12-r21
   digest: ""
   ## Specify a imagePullPolicy
@@ -778,7 +778,7 @@ volumePermissions:
   ##
   image:
     registry: docker.io
-    repository: bitnami/os-shell
+    repository: bitnamilegacy/os-shell
     tag: 12-debian-12-r50
     digest: ""
     pullPolicy: IfNotPresent

@@ -25,7 +25,7 @@ global:
   ##
   security:
     ## @param global.security.allowInsecureImages Allows skipping image verification
-    allowInsecureImages: false
+    allowInsecureImages: true
   ## Compatibility adaptations for Kubernetes platforms
   ##
   compatibility:
@@ -77,7 +77,7 @@ usePasswordFiles: true
 ##
 image:
   registry: docker.io
-  repository: bitnami/tomcat
+  repository: bitnamilegacy/tomcat
   tag: 11.0.10-debian-12-r4
   digest: ""
   ## Specify a imagePullPolicy
@@ -692,7 +692,7 @@ volumePermissions:
   ##
   image:
     registry: docker.io
-    repository: bitnami/os-shell
+    repository: bitnamilegacy/os-shell
     tag: 12-debian-12-r51
     digest: ""
     pullPolicy: IfNotPresent
@@ -750,7 +750,7 @@ metrics:
     ##
     image:
       registry: docker.io
-      repository: bitnami/jmx-exporter
+      repository: bitnamilegacy/jmx-exporter
       tag: 1.4.0-debian-12-r0
       digest: ""
       ## Specify a imagePullPolicy

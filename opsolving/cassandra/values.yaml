@@ -23,7 +23,7 @@ global:
   ##
   security:
     ## @param global.security.allowInsecureImages Allows skipping image verification
-    allowInsecureImages: false
+    allowInsecureImages: true
   ## Compatibility adaptations for Kubernetes platforms
   ##
   compatibility:
@@ -89,7 +89,7 @@ diagnosticMode:
 ##
 image:
   registry: docker.io
-  repository: bitnami/cassandra
+  repository: bitnamilegacy/cassandra
   tag: 5.0.5-debian-12-r7
   digest: ""
   ## Specify a imagePullPolicy
@@ -172,7 +172,7 @@ dynamicSeedDiscovery:
   ##
   image:
     registry: docker.io
-    repository: bitnami/os-shell
+    repository: bitnamilegacy/os-shell
     tag: 12-debian-12-r50
     digest: ""
     pullPolicy: IfNotPresent
@@ -713,7 +713,7 @@ volumePermissions:
   ##
   image:
     registry: docker.io
-    repository: bitnami/os-shell
+    repository: bitnamilegacy/os-shell
     tag: 12-debian-12-r50
     digest: ""
     pullPolicy: IfNotPresent
@@ -781,7 +781,7 @@ metrics:
   ##
   image:
     registry: docker.io
-    repository: bitnami/cassandra-exporter
+    repository: bitnamilegacy/cassandra-exporter
     tag: 2.3.8-debian-12-r51
     digest: ""
     pullPolicy: IfNotPresent
