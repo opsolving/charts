@@ -15,3 +15,5 @@ Changes made by Opsolving (if any):
 - Vendored into `opsolving/common`
 - Chart configuration and templates may be adapted to Opsolving conventions
 - See repository Git history and/or chart CHANGELOG for details
+
+Ongoing development and maintenance of this vendored library, as included under `opsolving/common`, are performed by Opsolving.

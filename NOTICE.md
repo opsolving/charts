@@ -14,3 +14,5 @@ This project includes and/or vendors third‑party components. Attribution and l
   - Modifications by Opsolving (if any): chart configuration and/or templates may be adapted. All changes are tracked in Git history and/or chart CHANGELOG.
 
 Trademarks are the property of their respective owners. "Bitnami" is a trademark of Broadcom Inc. Opsolving is not affiliated with, sponsored by, or endorsed by Broadcom or Bitnami.
+
+Continuing development and maintenance of the vendored `opsolving/common` library within this repository are performed by Opsolving.
