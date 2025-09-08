@@ -68,4 +68,3 @@ CUTOFF="2025-08-27T23:59:59Z"
 
 For details on third-party licenses, see the `LICENSE.md` file inside each
 chart directory.
-
