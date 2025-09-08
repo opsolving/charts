@@ -14,7 +14,7 @@ entries:
       tanzuCategory: service
     apiVersion: v2
     appVersion: 5.0.5
-    created: "2025-09-08T01:51:19.32252+02:00"
+    created: "2025-09-08T02:07:08.815351+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -24,7 +24,7 @@ entries:
     description: Apache Cassandra is an open source distributed database management
       system designed to handle large amounts of data across many servers, providing
       high availability with no single point of failure.
-    digest: 7b3fe92867b7e83433ecd62705024510c9860ccfd9ed8662607335a65fe2f053
+    digest: 062ba034556887fbfc3adb12a9b61a26dd405409dd913459912bc1d77bb77537
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/cassandra/img/cassandra-stack-220x234.png
     keywords:
@@ -46,10 +46,10 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 2.31.4
-    created: "2025-09-08T01:51:19.325358+02:00"
+    created: "2025-09-08T02:07:08.816043+02:00"
     description: A Library Helm Chart for grouping common logic between bitnami charts.
       This chart is not deployable by itself.
-    digest: 5fd4463e83c1c28725b242728da205a1fb150293dd02d7c3ad9e3a605ffe94f4
+    digest: 022b8c5db494437b3b565159ca680f7bec103d90b5b0157838287a895ea74df6
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/downloads/logos/bitnami-mark.png
     keywords:
@@ -78,7 +78,7 @@ entries:
       tanzuCategory: application
     apiVersion: v2
     appVersion: 9.1.1
-    created: "2025-09-08T01:51:19.330918+02:00"
+    created: "2025-09-08T02:07:08.821519+02:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -93,7 +93,7 @@ entries:
       version: 2.x.x
     description: EJBCA is an enterprise class PKI Certificate Authority software,
       built using Java (JEE) technology.
-    digest: 83d146ce06889e1fb914ab569f8346e66b5e9afcf5f4a2d6add5f9210a47e627
+    digest: c4cabc351d70f5542ba437cc5c1968116e48ce84602fe6262dc2b611fa90d4b8
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/ejbca/img/ejbca-stack-220x234.png
     keywords:
@@ -126,7 +126,7 @@ entries:
       tanzuCategory: service
     apiVersion: v2
     appVersion: 4.0.0
-    created: "2025-09-08T01:51:19.33649+02:00"
+    created: "2025-09-08T02:07:08.826193+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -136,7 +136,7 @@ entries:
     description: Apache Kafka is a distributed streaming platform designed to build
       real-time pipelines and can be used as a message broker or as a replacement
       for a log aggregation solution for big data applications.
-    digest: ddf2f67340626977ce5d723f0f18edfb22eb5692bb1b4c9bb5657da5080750a0
+    digest: 7c706f3ee84032b7334eeb6a1c3764cf8242fe634709d44b7f2c712056dd871a
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/kafka/img/kafka-stack-220x234.png
     keywords:
@@ -165,7 +165,7 @@ entries:
       tanzuCategory: application
     apiVersion: v2
     appVersion: 26.3.3
-    created: "2025-09-08T01:51:19.343322+02:00"
+    created: "2025-09-08T02:07:08.832114+02:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -179,7 +179,7 @@ entries:
     description: Keycloak is a high performance Java-based identity and access management
       solution. It lets developers add an authentication layer to their applications
       with minimum effort.
-    digest: aa9e02e498f0bf8d23053d33a87530b6ac3b76dc91a1af8e1fac8ce47e9715e6
+    digest: 61d5d3550cf1718089856db31ad2885ca7f1359a8df8621ca14617f7b05ffb26
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/keycloak/img/keycloak-stack-220x234.png
     keywords:
@@ -208,7 +208,7 @@ entries:
       tanzuCategory: service
     apiVersion: v2
     appVersion: 6.3.4
-    created: "2025-09-08T01:51:19.346573+02:00"
+    created: "2025-09-08T02:07:08.834574+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -217,7 +217,7 @@ entries:
       version: 2.x.x
     description: KeyDB is a high performance fork of Redis with a focus on multithreading,
       memory efficiency, and high throughput.
-    digest: 98f1eff80143fce89cf5ade75b85627d9625c3f0b937f725838b8b40de064a12
+    digest: 476fa1a802a31169feeed9c4194f72c7f2fa699af9645a39e8acda4641b4f2fe
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/keydb/img/keydb-stack-220x234.png
     keywords:
@@ -247,7 +247,7 @@ entries:
       tanzuCategory: clusterUtility
     apiVersion: v2
     appVersion: 9.1.2
-    created: "2025-09-08T01:51:19.348586+02:00"
+    created: "2025-09-08T02:07:08.836711+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -257,7 +257,7 @@ entries:
     description: Logstash is an open source data processing engine. It ingests data
       from multiple sources, processes it, and sends the output to final destination
       in real-time. It is a core component of the ELK stack.
-    digest: 47518d5d76c675c47f02170f22d49d5928656213784a364eab4e762b0d942530
+    digest: 8ae36eda2d9acf3186f28fede298f9b73baf2de4110061a297bc7bf1002a6cee
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/logstash/img/logstash-stack-220x234.png
     keywords:
@@ -287,7 +287,7 @@ entries:
       tanzuCategory: service
     apiVersion: v2
     appVersion: 12.0.2
-    created: "2025-09-08T01:51:19.351508+02:00"
+    created: "2025-09-08T02:07:08.839508+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -297,7 +297,7 @@ entries:
     description: MariaDB is an open source, community-developed SQL database server
       that is widely in use around the world due to its enterprise features, flexibility,
       and collaboration with leading tech firms.
-    digest: 2bd2728c0b1cb71c28d425623d56bde8e33062e4cf95671c5f26c8eafa150598
+    digest: 257b3e2366d85d3cacd74793aa1cc68e63c9f6b5eb498370279e7d820af5cad0
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/mariadb/img/mariadb-stack-220x234.png
     keywords:
@@ -329,7 +329,7 @@ entries:
       tanzuCategory: service
     apiVersion: v2
     appVersion: 1.6.39
-    created: "2025-09-08T01:51:19.354091+02:00"
+    created: "2025-09-08T02:07:08.841717+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -339,7 +339,7 @@ entries:
     description: Memcached is an high-performance, distributed memory object caching
       system, generic in nature, but intended for use in speeding up dynamic web applications
       by alleviating database load.
-    digest: 4d23f49a103cbe2f7eabbf65b7c9eb2a3f11c38102451c628f9bf5c3cc5958b3
+    digest: 756dbc6f15c76ae083a560ee403c57eda51ec14ff8562e6f4924e3f050864dd4
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/memcached/img/memcached-stack-220x234.png
     keywords:
@@ -368,7 +368,7 @@ entries:
       tanzuCategory: clusterUtility
     apiVersion: v2
     appVersion: 1.29.1
-    created: "2025-09-08T01:51:19.356208+02:00"
+    created: "2025-09-08T02:07:08.84378+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -378,7 +378,7 @@ entries:
     description: NGINX Open Source is a web server that can be also used as a reverse
       proxy, load balancer, and HTTP cache. Recommended for high-demanding sites due
       to its ability to provide faster content.
-    digest: bc533df8967198435673b1488821d81582f65841807d7ce71ec1ecc0d8c0fbae
+    digest: 1941c77537cadc05c4ab9c0340ae38ab36ceac3b679acb432ac41dc32c4c6986
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/nginx/img/nginx-stack-220x234.png
     keywords:
@@ -408,7 +408,7 @@ entries:
       tanzuCategory: application
     apiVersion: v2
     appVersion: 5.2.2
-    created: "2025-09-08T01:51:19.361416+02:00"
+    created: "2025-09-08T02:07:08.848425+02:00"
     dependencies:
     - condition: db.bundleTestDB
       name: mariadb
@@ -424,7 +424,7 @@ entries:
     description: phpMyAdmin is a free software tool written in PHP, intended to handle
       the administration of MySQL over the Web. phpMyAdmin supports a wide range of
       operations on MySQL and MariaDB.
-    digest: be43298e66d1ac497656786d2dfecba3fa6c86bf8ef21348d9479c6df41a7446
+    digest: fcc8ee8a3db257f74eabea14486657282939c37aa14eeb8ba338b174395d49df
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/phpmyadmin/img/phpmyadmin-stack-220x234.png
     keywords:
@@ -454,7 +454,7 @@ entries:
       tanzuCategory: service
     apiVersion: v2
     appVersion: 17.6.0
-    created: "2025-09-08T01:51:19.365457+02:00"
+    created: "2025-09-08T02:07:08.851463+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -464,7 +464,7 @@ entries:
     description: PostgreSQL (Postgres) is an open source object-relational database
       known for reliability and data integrity. ACID-compliant, it supports foreign
       keys, joins, views, triggers and stored procedures.
-    digest: 1936c4476607c65eba037c4720d6d8d8b4dc6dc7c25fd434b50a2f136b1bb9b9
+    digest: 85c5c52314c464922e3e20d9e6405b9348a706a1951009fcaae5b5d84b3ce3fb
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/postgresql/img/postgresql-stack-220x234.png
     keywords:
@@ -501,7 +501,7 @@ entries:
       tanzuCategory: service
     apiVersion: v2
     appVersion: 8.2.1
-    created: "2025-09-08T01:51:19.369609+02:00"
+    created: "2025-09-08T02:07:08.855723+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -511,7 +511,7 @@ entries:
     description: Redis(R) is an open source, advanced key-value store. It is often
       referred to as a data structure server since keys can contain strings, hashes,
       lists, sets and sorted sets.
-    digest: 4aaff04de1bad7a01c5c68b4011681d384d93c2e12e5bfccf1915b468e163848
+    digest: ebc44ee5f0cadc6cf609f842ba66e15d04ed613ecba00627431917813d60132c
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/redis/img/redis-stack-220x234.png
     keywords:
@@ -541,7 +541,7 @@ entries:
       tanzuCategory: service
     apiVersion: v2
     appVersion: 8.2.1
-    created: "2025-09-08T01:51:19.373025+02:00"
+    created: "2025-09-08T02:07:08.858967+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -551,7 +551,7 @@ entries:
     description: Redis(R) is an open source, scalable, distributed in-memory cache
       for applications. It can be used to store and serve data in the form of strings,
       hashes, lists, sets and sorted sets.
-    digest: 421a92b5f0922ab9a971b52fca1275df4c4cbd287b0801e3410111e39c3e7ba3
+    digest: bbf68f7c929e1a5e8332acc2d2b1ef02db1caf6603212dd6528a17026bb5e55b
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/redis/img/redis-stack-220x234.png
     keywords:
@@ -581,7 +581,7 @@ entries:
       tanzuCategory: application
     apiVersion: v2
     appVersion: 11.0.10
-    created: "2025-09-08T01:51:19.375019+02:00"
+    created: "2025-09-08T02:07:08.860797+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -591,7 +591,7 @@ entries:
     description: Apache Tomcat is an open-source web server designed to host and run
       Java-based web applications. It is a lightweight server with a good performance
       for applications running in production environments.
-    digest: e6eb0326c21ee8b9793c8098b2a1aea218bcd541c8a73d13a008dcdd1ba29647
+    digest: 327aca12fdbc4974b9914f877330a755b2f7548963105b5e8bf9f6fc2f1d9347
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/tomcat/img/tomcat-stack-220x234.png
     keywords:
@@ -622,7 +622,7 @@ entries:
       tanzuCategory: application
     apiVersion: v2
     appVersion: 37.0.0
-    created: "2025-09-08T01:51:19.376805+02:00"
+    created: "2025-09-08T02:07:08.862456+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -631,7 +631,7 @@ entries:
       version: 2.x.x
     description: Wildfly is a lightweight, open source application server, formerly
       known as JBoss, that implements the latest enterprise Java standards.
-    digest: 8a61a0d4f49ccda767e35428dd7ef47ae95c10fc0bdc6f32e7d05bb54143bf6f
+    digest: 94ef89d1d6ff1d17a5d699659d2968a4baaf42aa5d5c37ea40d84e1eedd28b95
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/wildfly/img/wildfly-stack-220x234.png
     keywords:
@@ -662,7 +662,7 @@ entries:
       tanzuCategory: clusterUtility
     apiVersion: v2
     appVersion: 3.9.3
-    created: "2025-09-08T01:51:19.379397+02:00"
+    created: "2025-09-08T02:07:08.864473+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -671,7 +671,7 @@ entries:
       version: 2.x.x
     description: Apache ZooKeeper provides a reliable, centralized register of configuration
       data and services for distributed applications.
-    digest: 9d3df5edce71057192b7fc7b490656d4e4957df24bd28954c2f44275e6fd6e5c
+    digest: dc5617aababce2b92e2b5d4a3742e1e29c78c53743d1a3fc74becc6aa4076df7
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/zookeeper/img/zookeeper-stack-220x234.png
     keywords:
@@ -685,4 +685,4 @@ entries:
     urls:
     - https://opsolving.github.io/charts/zookeeper-13.8.7.tgz
     version: 13.8.7
-generated: "2025-09-08T01:51:19.319925+02:00"
+generated: "2025-09-08T02:07:08.813142+02:00"
