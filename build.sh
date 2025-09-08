@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-rm -rf docs
+rm -rf docs/
 mkdir -p docs
 
 for chart in opsolving/*/; do
