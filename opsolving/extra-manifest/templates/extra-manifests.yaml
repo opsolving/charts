@@ -1,0 +1,35 @@
+{{/*
+Copyright Opsolving. All Rights Reserved.
+SPDX-License-Identifier: APACHE-2.0
+*/}}
+{{- $root := . -}}
+{{- $groups := $root.Values.extraManifests -}}
+{{- $override := default $root.Values.fullnameOverride $root.Values.fullNameOverride -}}
+{{- $prefix := default (include "common.names.fullname" $root) $override -}}
+{{- $ns := include "common.names.namespace" $root -}}
+{{- $stdLabels := (include "common.labels.standard" (dict "customLabels" $root.Values.commonLabels "context" $root) | fromYaml | default (dict)) -}}
+{{- $stdAnn := (include "common.tplvalues.render" ( dict "value" $root.Values.commonAnnotations "context" $root ) | fromYaml | default (dict)) -}}
+{{- if kindIs "map" $groups }}
+{{- range $_, $group := $groups }}
+{{- if kindIs "map" $group }}
+{{- range $name, $item := $group }}
+---
+{{- if kindIs "map" $item }}
+{{- $obj := deepCopy $item -}}
+{{- $meta := (index $obj "metadata" | default (dict)) -}}
+{{- $_ := set $obj "metadata" $meta -}}
+{{- $_ := set $meta "name" (printf "%s-%s" $prefix $name) -}}
+{{- $_ := set $meta "namespace" $ns -}}
+{{- /* Merge standard labels and common annotations with per-object values (object wins) */ -}}
+{{- $existing := (index $meta "labels" | default (dict)) -}}
+{{- $_ := set $meta "labels" (merge (deepCopy $stdLabels) (deepCopy $existing)) -}}
+{{- $existingAnn := (index $meta "annotations" | default (dict)) -}}
+{{- $_ := set $meta "annotations" (merge (deepCopy $stdAnn) (deepCopy $existingAnn)) -}}
+{{ tpl (toYaml $obj) $root | nindent 0 }}
+{{- else if kindIs "string" $item }}
+{{ tpl $item $root | nindent 0 }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
