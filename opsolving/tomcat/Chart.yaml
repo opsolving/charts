@@ -12,27 +12,27 @@ annotations:
 apiVersion: v2
 appVersion: 11.0.10
 dependencies:
-- name: common
-  repository: https://opsolving.github.io/charts/
-  tags:
-  - bitnami-common
-  version: 2.x.x
+  - name: common
+    repository: https://opsolving.github.io/charts/
+    tags:
+      - bitnami-common
+    version: 2.x.x
 description: Apache Tomcat is an open-source web server designed to host and run Java-based
   web applications. It is a lightweight server with a good performance for applications
   running in production environments.
 home: https://bitnami.com
 icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/tomcat/img/tomcat-stack-220x234.png
 keywords:
-- tomcat
-- java
-- http
-- web
-- application server
-- jsp
+  - tomcat
+  - java
+  - http
+  - web
+  - application server
+  - jsp
 maintainers:
-- name: Broadcom, Inc. All Rights Reserved.
-  url: https://github.com/bitnami/charts
+  - name: Broadcom, Inc. All Rights Reserved.
+    url: https://github.com/bitnami/charts
 name: tomcat
 sources:
-- https://github.com/bitnami/charts/tree/main/bitnami/tomcat
+  - https://github.com/bitnami/charts/tree/main/bitnami/tomcat
 version: 12.0.8
