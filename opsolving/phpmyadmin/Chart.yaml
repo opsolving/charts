@@ -10,12 +10,6 @@ annotations:
 apiVersion: v2
 appVersion: 5.2.2
 dependencies:
-- condition: db.bundleTestDB
-  name: mariadb
-  repository: https://opsolving.github.io/charts/
-  tags:
-  - phpmyadmin-database
-  version: 22.x.x
 - name: common
   repository: https://opsolving.github.io/charts/
   tags:

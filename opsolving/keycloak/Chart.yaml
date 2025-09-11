@@ -9,11 +9,6 @@ annotations:
   tanzuCategory: application
 apiVersion: v2
 appVersion: 26.3.3
-dependencies:
-- condition: postgresql.enabled
-  name: postgresql
-  repository: https://opsolving.github.io/charts/
-  version: 16.x.x
 - name: common
   repository: https://opsolving.github.io/charts/
   tags:

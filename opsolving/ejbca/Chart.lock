@@ -1,9 +1,0 @@
-dependencies:
-- name: mariadb
-  repository: https://opsolving.github.io/charts/
-  version: 22.0.0
-- name: common
-  repository: https://opsolving.github.io/charts/
-  version: 2.31.4
-digest: sha256:e10ffc9ad49c9e5b52c724f353e8e0c739d8894919292697d8decd2b0907d6a0
-generated: "2025-09-08T01:49:07.897255+02:00"

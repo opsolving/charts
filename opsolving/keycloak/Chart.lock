@@ -1,9 +1,0 @@
-dependencies:
-- name: postgresql
-  repository: https://opsolving.github.io/charts/
-  version: 16.7.27
-- name: common
-  repository: https://opsolving.github.io/charts/
-  version: 2.31.4
-digest: sha256:b1ec5c6d32edbf2ecf0ca4d34f6dc1fa4461d06f398223d595bb1e89e3918f1b
-generated: "2025-09-08T01:49:20.591605+02:00"

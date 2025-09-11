@@ -573,9 +573,6 @@ db:
   ## host: foo
   ##
   host: ""
-  ## @param db.bundleTestDB Deploy a MariaDB instance for testing purposes
-  ##
-  bundleTestDB: false
   ## @param db.enableSsl Enable SSL for the connection between phpMyAdmin and the database
   ##
   enableSsl: false

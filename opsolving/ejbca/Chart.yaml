@@ -8,12 +8,6 @@ annotations:
 apiVersion: v2
 appVersion: 9.1.1
 dependencies:
-- condition: mariadb.enabled
-  name: mariadb
-  repository: https://opsolving.github.io/charts/
-  tags:
-  - ejbca-database
-  version: 22.x.x
 - name: common
   repository: https://opsolving.github.io/charts/
   tags:
