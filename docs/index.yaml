@@ -6,10 +6,10 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 2.31.4
-    created: "2025-09-12T00:11:36.652962+02:00"
+    created: "2025-09-12T00:12:34.2135+02:00"
     description: A Library Helm Chart for grouping common logic between bitnami charts.
       This chart is not deployable by itself.
-    digest: 98f60efa9ee55803d75301c8ddc1bfc4232d7f527a62a39d0fc4e8408885b3e5
+    digest: 7c38d5cbe50f380e8843a505cdaed2b7d79eef41ae64b474c295189b45c63706
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/downloads/logos/bitnami-mark.png
     keywords:
@@ -38,7 +38,7 @@ entries:
       tanzuCategory: application
     apiVersion: v2
     appVersion: 9.1.1
-    created: "2025-09-12T00:11:36.654596+02:00"
+    created: "2025-09-12T00:12:34.215166+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -47,7 +47,7 @@ entries:
       version: 2.x.x
     description: EJBCA is an enterprise class PKI Certificate Authority software,
       built using Java (JEE) technology.
-    digest: 67d51dc520dade295aee3a0be33897de78ddffad27ba3c3ae566406519b38718
+    digest: 6b79f3efabcf0a72848854eb03f19f6e082f7dd927773daf83cb669ecba7b8de
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/ejbca/img/ejbca-stack-220x234.png
     keywords:
@@ -67,13 +67,13 @@ entries:
   extra-manifest:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-09-12T00:11:36.655645+02:00"
+    created: "2025-09-12T00:12:34.215998+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
       version: 2.x.x
     description: A Helm chart for Kubernetes
-    digest: 38ad6c32998c7810e7610518d7f1f2c5a5b6df5bc0cc1bbcdebbb459983ffbb8
+    digest: b88d2fd3c99a864127de328c30b5b477f879a1744cbd02ee45527fd1034b9c94
     name: extra-manifest
     type: application
     urls:
@@ -91,7 +91,7 @@ entries:
       tanzuCategory: application
     apiVersion: v2
     appVersion: 26.3.3
-    created: "2025-09-12T00:11:36.65813+02:00"
+    created: "2025-09-12T00:12:34.21881+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -101,7 +101,7 @@ entries:
     description: Keycloak is a high performance Java-based identity and access management
       solution. It lets developers add an authentication layer to their applications
       with minimum effort.
-    digest: 766e0fc664675facedd5cc35e9c8cd4cc7350805e226d8fba0eb2ff27989328b
+    digest: d58189194a63a96838c4f892957a31cf7a4de501bdb1931b1d3b24c7cdd97b44
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/keycloak/img/keycloak-stack-220x234.png
     keywords:
@@ -130,7 +130,7 @@ entries:
       tanzuCategory: service
     apiVersion: v2
     appVersion: 6.3.4
-    created: "2025-09-12T00:11:36.66075+02:00"
+    created: "2025-09-12T00:12:34.221447+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -139,7 +139,7 @@ entries:
       version: 2.x.x
     description: KeyDB is a high performance fork of Redis with a focus on multithreading,
       memory efficiency, and high throughput.
-    digest: f25ee08c8eaab0c7247a77e7f0c76d6634e63353d0a5e5c0be512f6dad05f44e
+    digest: 7f35ab598127a1be92cd7344ace4bf000e3cf26b71479a96d3615f69718d8a2d
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/keydb/img/keydb-stack-220x234.png
     keywords:
@@ -171,7 +171,7 @@ entries:
       tanzuCategory: service
     apiVersion: v2
     appVersion: 1.6.39
-    created: "2025-09-12T00:11:36.663358+02:00"
+    created: "2025-09-12T00:12:34.223634+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -181,7 +181,7 @@ entries:
     description: Memcached is an high-performance, distributed memory object caching
       system, generic in nature, but intended for use in speeding up dynamic web applications
       by alleviating database load.
-    digest: 3fe422b1eae5b3aebec608902ea22a60a59d2c5e4c6ec0d75c085f7326310cb4
+    digest: 119ccb120ccaedda95e76473bf5891cd0c1b61df409dec8fefc8a59af07a0424
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/memcached/img/memcached-stack-220x234.png
     keywords:
@@ -210,7 +210,7 @@ entries:
       tanzuCategory: clusterUtility
     apiVersion: v2
     appVersion: 1.29.1
-    created: "2025-09-12T00:11:36.665455+02:00"
+    created: "2025-09-12T00:12:34.225718+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -220,7 +220,7 @@ entries:
     description: NGINX Open Source is a web server that can be also used as a reverse
       proxy, load balancer, and HTTP cache. Recommended for high-demanding sites due
       to its ability to provide faster content.
-    digest: a58b008dca7e9021db1b55b14cfabee8820226a50df5ca9d1ca094b1780f9571
+    digest: 0866beb576dc38d2ffad23f2b42f37e068ae77b448e27a04e7098df42f9ec1e5
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/nginx/img/nginx-stack-220x234.png
     keywords:
@@ -250,7 +250,7 @@ entries:
       tanzuCategory: application
     apiVersion: v2
     appVersion: 5.2.2
-    created: "2025-09-12T00:11:36.667178+02:00"
+    created: "2025-09-12T00:12:34.227506+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -260,7 +260,7 @@ entries:
     description: phpMyAdmin is a free software tool written in PHP, intended to handle
       the administration of MySQL over the Web. phpMyAdmin supports a wide range of
       operations on MySQL and MariaDB.
-    digest: 737e2efe1ac9b33c13099a8aab4301e1a067d4394e418dba06e838722d197e89
+    digest: 55a36e0c0c4488d5ae156fb9297fc61eea8f11251ed681bcb86c7cd4a55a706a
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/phpmyadmin/img/phpmyadmin-stack-220x234.png
     keywords:
@@ -290,7 +290,7 @@ entries:
       tanzuCategory: application
     apiVersion: v2
     appVersion: 11.0.10
-    created: "2025-09-12T00:11:36.669587+02:00"
+    created: "2025-09-12T00:12:34.229627+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -300,7 +300,7 @@ entries:
     description: Apache Tomcat is an open-source web server designed to host and run
       Java-based web applications. It is a lightweight server with a good performance
       for applications running in production environments.
-    digest: f0f332cea6bc82aa2364c971969b8bd7a26ddf2447e7c8c2b4cf57723d93bddc
+    digest: 6c6a6a8b0b7f92185ee327010dd38cc2430af0705c4c9efbfecef59ca39aba11
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/tomcat/img/tomcat-stack-220x234.png
     keywords:
@@ -331,7 +331,7 @@ entries:
       tanzuCategory: application
     apiVersion: v2
     appVersion: 37.0.0
-    created: "2025-09-12T00:11:36.67128+02:00"
+    created: "2025-09-12T00:12:34.231294+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -340,7 +340,7 @@ entries:
       version: 2.x.x
     description: Wildfly is a lightweight, open source application server, formerly
       known as JBoss, that implements the latest enterprise Java standards.
-    digest: 9aca58762ebaf1b6b1fc3eb654810171843a4276b82726bad683cd6267fa87ec
+    digest: 70dc1ad339b4d3a79a5eab8f6945a90c9e5563674a273e1db90fc89dd171e000
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/wildfly/img/wildfly-stack-220x234.png
     keywords:
@@ -371,7 +371,7 @@ entries:
       tanzuCategory: clusterUtility
     apiVersion: v2
     appVersion: 3.9.3
-    created: "2025-09-12T00:11:36.673267+02:00"
+    created: "2025-09-12T00:12:34.233311+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
@@ -380,7 +380,7 @@ entries:
       version: 2.x.x
     description: Apache ZooKeeper provides a reliable, centralized register of configuration
       data and services for distributed applications.
-    digest: c9192bdbe94ce4475d60feaa450dee96f7a16aea520837b5a572a342d894ebf2
+    digest: 214864b1f9c3d5c2597d9f0bdc1b3dc90038993c5862a8241e577138586bf191
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/zookeeper/img/zookeeper-stack-220x234.png
     keywords:
@@ -394,4 +394,4 @@ entries:
     urls:
     - https://opsolving.github.io/charts/zookeeper-13.8.7.tgz
     version: 13.8.7
-generated: "2025-09-12T00:11:36.652234+02:00"
+generated: "2025-09-12T00:12:34.212682+02:00"
