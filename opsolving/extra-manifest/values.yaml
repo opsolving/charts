@@ -1,30 +1,35 @@
 # Copyright Opsolving. All Rights Reserved.
 # SPDX-License-Identifier: APACHE-2.0
 
-## @param nameOverride String to partially override common.names.fullname
-##
-nameOverride: ""
-## @param fullnameOverride String to fully override common.names.fullname
-##
-fullNameOverride: ""
-# @param namespaceOverride String to fully override common.names.namespace
-##
+## @section Global parameters
+
+## @param nameOverride String to partially override `common.names.fullname`
+nameOverride: "foo"
+
+## @param fullnameOverride String to fully override `common.names.fullname`
+fullnameOverride: "katana"
+
+## @param namespaceOverride String to fully override `common.names.namespace`
 namespaceOverride: ""
 
-## @param commonLabels Labels to add to all deployed objects
-##
-commonLabels: {}
-## @param commonAnnotations Annotations to add to all deployed objects
-##
-commonAnnotations: {}
+## @section Extra-manifest parameters
 
-## @param extraManifests object User-defined manifests grouped by a first-level key (group). The second-level key is used as the resource name and will be automatically prefixed with the chart fullname.
+## @param releaseNamePrefix Whether to prefix object names with chart fullname
+## If true (default), object names are rendered as `<fullname>-<name>`.
+## If false, object names use only the provided key from `extraManifests`.
+releaseNamePrefix: true
+
+## @param commonLabels Labels to add to all rendered objects
+commonLabels: { }
+
+## @param commonAnnotations Annotations to add to all rendered objects
+commonAnnotations: { }
+
+## @param extraManifests Object map of user-defined manifests grouped by a first-level key
 ## Example:
 ## extraManifests:
 ##   secrets:
 ##     token:
 ##       apiVersion: v1
 ##       kind: Secret
-##       stringData:
-##         TOKEN: asdf1234
 extraManifests: {}

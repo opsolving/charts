@@ -1,0 +1,216 @@
+suite: extra-manifests
+templates:
+  - templates/extra-manifests.yaml
+
+tests:
+  # README row: extra | extra | - | - -> name: extra-token; labels: instance: extra, name: extra
+  - it: README row 1 - default names
+    release:
+      name: extra
+      namespace: prod
+    set:
+      releaseNamePrefix: true
+      nameOverride: ""
+      fullnameOverride: ""
+      commonLabels: {}
+      commonAnnotations: {}
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - hasDocuments:
+          count: 1
+      - isKind:
+          of: Secret
+      - equal:
+          path: metadata.name
+          value: extra-token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: extra
+            app.kubernetes.io/name: extra
+
+  # README row: extra | extra | foo | - -> name: extra-foo-token; labels: instance: extra, name: foo
+  - it: README row 2 - nameOverride only
+    release:
+      name: extra
+      namespace: prod
+    set:
+      releaseNamePrefix: true
+      nameOverride: foo
+      fullnameOverride: ""
+      commonLabels: {}
+      commonAnnotations: {}
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: extra-foo-token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: extra
+            app.kubernetes.io/name: foo
+
+  # README row: extra | extra | - | katana -> name: katana-token; labels: instance: extra, name: extra
+  - it: README row 3 - fullnameOverride only (release contains chart)
+    release:
+      name: extra
+      namespace: prod
+    set:
+      releaseNamePrefix: true
+      nameOverride: ""
+      fullnameOverride: katana
+      commonLabels: {}
+      commonAnnotations: {}
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: katana-token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: extra
+            app.kubernetes.io/name: extra
+
+  # README row: extra | extra | foo | katana -> name: katana-token; labels: instance: extra, name: katana
+  - it: README row 4 - fullnameOverride wins with nameOverride
+    release:
+      name: extra
+      namespace: prod
+    set:
+      releaseNamePrefix: true
+      nameOverride: foo
+      fullnameOverride: katana
+      commonLabels: {}
+      commonAnnotations: {}
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: katana-token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: extra
+            app.kubernetes.io/name: foo
+
+  # README row: extra | katana | - | - -> name: katana-extra-token; labels: instance: katana, name: extra
+  - it: README row 5 - release different than chart
+    release:
+      name: katana
+      namespace: prod
+    set:
+      releaseNamePrefix: true
+      nameOverride: ""
+      fullnameOverride: ""
+      commonLabels: {}
+      commonAnnotations: {}
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: katana-extra-token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: katana
+            app.kubernetes.io/name: extra
+
+  # README row: extra | katana | foo | - -> name: katana-foo-token; labels: instance: katana, name: foo
+  - it: README row 6 - release different + nameOverride
+    release:
+      name: katana
+      namespace: prod
+    set:
+      releaseNamePrefix: true
+      nameOverride: foo
+      fullnameOverride: ""
+      commonLabels: {}
+      commonAnnotations: {}
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: katana-foo-token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: katana
+            app.kubernetes.io/name: foo
+
+  # README row: extra | katana | - | katana -> name: katana-token; labels: instance: katana, name: extra
+  - it: README row 7 - release different + fullnameOverride
+    release:
+      name: katana
+      namespace: prod
+    set:
+      releaseNamePrefix: true
+      nameOverride: ""
+      fullnameOverride: katana
+      commonLabels: {}
+      commonAnnotations: {}
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: katana-token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: katana
+            app.kubernetes.io/name: extra
+
+  # README row: extra | katana | foo | katana -> name: katana-token; labels: instance: katana, name: foo
+  - it: README row 8 - release different + both overrides
+    release:
+      name: katana
+      namespace: prod
+    set:
+      releaseNamePrefix: true
+      nameOverride: foo
+      fullnameOverride: katana
+      commonLabels: {}
+      commonAnnotations: {}
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: katana-token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: katana
+            app.kubernetes.io/name: foo
