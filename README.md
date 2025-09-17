@@ -1,3 +1,6 @@
+<!-- Copyright Opsolving. All Rights Reserved. -->
+<!-- SPDX-License-Identifier: APACHE-2.0 -->
+
 # Helm Charts
 
 ## Add Repo
