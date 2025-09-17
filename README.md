@@ -33,6 +33,6 @@ helm search repo opsolving
 
 ```bash
 helm-unittest \
-    opsolving/extra-manifest/ \
-    -f tests/extra-manifests_test.yaml
+    opsolving/extra/ \
+    -f tests/manifests_test.yaml
 ```
