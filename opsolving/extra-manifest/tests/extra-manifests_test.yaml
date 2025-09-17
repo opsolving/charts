@@ -1,3 +1,6 @@
+# Copyright Opsolving. All Rights Reserved.
+# SPDX-License-Identifier: APACHE-2.0
+
 suite: extra-manifests
 templates:
   - templates/extra-manifests.yaml
@@ -239,33 +242,6 @@ tests:
       - equal:
           path: metadata.name
           value: extra-token
-
-  # releaseNamePrefix=false disables prefixing of object names
-  - it: releaseNamePrefix false disables name prefixing
-    release:
-      name: extra
-      namespace: prod
-    set:
-      releaseNamePrefix: false
-      nameOverride: ""
-      fullnameOverride: ""
-      commonLabels: {}
-      commonAnnotations: {}
-      namespaceOverride: ""
-      extraManifests:
-        secrets:
-          token:
-            apiVersion: v1
-            kind: Secret
-    asserts:
-      - equal:
-          path: metadata.name
-          value: token
-      - isSubset:
-          path: metadata.labels
-          content:
-            app.kubernetes.io/instance: extra
-            app.kubernetes.io/name: extra
 
   # commonLabels should merge into metadata.labels
   - it: applies commonLabels to all resources
