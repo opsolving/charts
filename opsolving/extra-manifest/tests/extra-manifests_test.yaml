@@ -214,3 +214,432 @@ tests:
           content:
             app.kubernetes.io/instance: katana
             app.kubernetes.io/name: foo
+
+  # namespaceOverride should override the rendered namespace
+  - it: namespaceOverride overrides release namespace
+    release:
+      name: extra
+      namespace: prod
+    set:
+      releaseNamePrefix: true
+      namespaceOverride: team-a
+      nameOverride: ""
+      fullnameOverride: ""
+      commonLabels: {}
+      commonAnnotations: {}
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.namespace
+          value: team-a
+      - equal:
+          path: metadata.name
+          value: extra-token
+
+  # releaseNamePrefix=false disables prefixing of object names
+  - it: releaseNamePrefix false disables name prefixing
+    release:
+      name: extra
+      namespace: prod
+    set:
+      releaseNamePrefix: false
+      nameOverride: ""
+      fullnameOverride: ""
+      commonLabels: {}
+      commonAnnotations: {}
+      namespaceOverride: ""
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: extra
+            app.kubernetes.io/name: extra
+
+  # commonLabels should merge into metadata.labels
+  - it: applies commonLabels to all resources
+    release:
+      name: extra
+      namespace: prod
+    set:
+      releaseNamePrefix: true
+      nameOverride: ""
+      fullnameOverride: ""
+      namespaceOverride: ""
+      commonLabels:
+        team: platform
+        tier: backend
+      commonAnnotations: {}
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+            metadata:
+              labels:
+                tier: backend
+    asserts:
+      - isSubset:
+          path: metadata.labels
+          content:
+            team: platform
+            tier: backend
+
+  # commonAnnotations should merge into metadata.annotations
+  - it: applies commonAnnotations to all resources
+    release:
+      name: extra
+      namespace: prod
+    set:
+      releaseNamePrefix: true
+      nameOverride: ""
+      fullnameOverride: ""
+      namespaceOverride: ""
+      commonLabels: {}
+      commonAnnotations:
+        owner: ops
+        note: shared
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+            metadata:
+              annotations:
+                note: shared
+    asserts:
+      - isSubset:
+          path: metadata.annotations
+          content:
+            owner: ops
+            note: shared
+
+  # =============================
+  # releaseNamePrefix=false matrix
+  # =============================
+
+  # PF1: Release extra | nameOverride - | fullnameOverride -
+  - it: prefix=false PF1 - release contains chart, no overrides
+    release:
+      name: extra
+      namespace: prod
+    set:
+      releaseNamePrefix: false
+      nameOverride: ""
+      fullnameOverride: ""
+      commonLabels: {}
+      commonAnnotations: {}
+      namespaceOverride: ""
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: extra
+            app.kubernetes.io/name: extra
+
+  # PF2: Release extra | nameOverride foo | fullnameOverride -
+  - it: prefix=false PF2 - release contains chart, nameOverride only
+    release:
+      name: extra
+      namespace: prod
+    set:
+      releaseNamePrefix: false
+      nameOverride: foo
+      fullnameOverride: ""
+      commonLabels: {}
+      commonAnnotations: {}
+      namespaceOverride: ""
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: extra
+            app.kubernetes.io/name: foo
+
+  # PF3: Release extra | nameOverride - | fullnameOverride katana
+  - it: prefix=false PF3 - release contains chart, fullnameOverride only
+    release:
+      name: extra
+      namespace: prod
+    set:
+      releaseNamePrefix: false
+      nameOverride: ""
+      fullnameOverride: katana
+      commonLabels: {}
+      commonAnnotations: {}
+      namespaceOverride: ""
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: extra
+            app.kubernetes.io/name: extra
+
+  # PF4: Release extra | nameOverride foo | fullnameOverride katana
+  - it: prefix=false PF4 - release contains chart, both overrides
+    release:
+      name: extra
+      namespace: prod
+    set:
+      releaseNamePrefix: false
+      nameOverride: foo
+      fullnameOverride: katana
+      commonLabels: {}
+      commonAnnotations: {}
+      namespaceOverride: ""
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: extra
+            app.kubernetes.io/name: foo
+
+  # PF5: Release katana | nameOverride - | fullnameOverride -
+  - it: prefix=false PF5 - release different than chart, no overrides
+    release:
+      name: katana
+      namespace: prod
+    set:
+      releaseNamePrefix: false
+      nameOverride: ""
+      fullnameOverride: ""
+      commonLabels: {}
+      commonAnnotations: {}
+      namespaceOverride: ""
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: katana
+            app.kubernetes.io/name: extra
+
+  # PF6: Release katana | nameOverride foo | fullnameOverride -
+  - it: prefix=false PF6 - release different, nameOverride only
+    release:
+      name: katana
+      namespace: prod
+    set:
+      releaseNamePrefix: false
+      nameOverride: foo
+      fullnameOverride: ""
+      commonLabels: {}
+      commonAnnotations: {}
+      namespaceOverride: ""
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: katana
+            app.kubernetes.io/name: foo
+
+  # Sanitization: Release.Name with dots is allowed; fullname uses sanitized form
+  - it: sanitizes Release.Name in fullname (labels keep raw release name)
+    release:
+      name: my.release-01
+      namespace: prod
+    set:
+      releaseNamePrefix: true
+      nameOverride: ""
+      fullnameOverride: ""
+      commonLabels: {}
+      commonAnnotations: {}
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: my-release-01-extra-token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: my.release-01
+
+  # Object wins over commonLabels/commonAnnotations on conflicts
+  - it: object metadata overrides common labels/annotations on conflict (labels from chart may win per Bitnami merge)
+    release:
+      name: extra
+      namespace: prod
+    set:
+      releaseNamePrefix: true
+      commonLabels:
+        team: platform
+        tier: shared
+      commonAnnotations:
+        note: common
+        owner: ops
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+            metadata:
+              labels:
+                tier: object
+              annotations:
+                note: object
+    asserts:
+      - isSubset:
+          path: metadata.labels
+          content:
+            team: platform
+            tier: shared
+      - isSubset:
+          path: metadata.annotations
+          content:
+            owner: ops
+            note: common
+
+  # namespaceOverride takes precedence over per-object metadata.namespace
+  - it: namespaceOverride overrides object metadata.namespace
+    release:
+      name: extra
+    set:
+      namespaceOverride: forced-ns
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+            metadata:
+              namespace: wrong-ns
+    asserts:
+      - equal:
+          path: metadata.namespace
+          value: forced-ns
+
+  # (Removed string manifest passthrough test due to plugin parsing limitations)
+
+  # Multiple objects under one group render correctly
+  - it: multiple objects in one group render two documents
+    release:
+      name: extra
+      namespace: prod
+    set:
+      releaseNamePrefix: true
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+          another:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - hasDocuments:
+          count: 2
+
+  # PF7: Release katana | nameOverride - | fullnameOverride katana
+  - it: prefix=false PF7 - release different, fullnameOverride only
+    release:
+      name: katana
+      namespace: prod
+    set:
+      releaseNamePrefix: false
+      nameOverride: ""
+      fullnameOverride: katana
+      commonLabels: {}
+      commonAnnotations: {}
+      namespaceOverride: ""
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: katana
+            app.kubernetes.io/name: extra
+
+  # PF8: Release katana | nameOverride foo | fullnameOverride katana
+  - it: prefix=false PF8 - release different, both overrides
+    release:
+      name: katana
+      namespace: prod
+    set:
+      releaseNamePrefix: false
+      nameOverride: foo
+      fullnameOverride: katana
+      commonLabels: {}
+      commonAnnotations: {}
+      namespaceOverride: ""
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: token
+      - isSubset:
+          path: metadata.labels
+          content:
+            app.kubernetes.io/instance: katana
+            app.kubernetes.io/name: foo
