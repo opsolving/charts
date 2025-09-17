@@ -12,11 +12,11 @@ fullnameOverride: ""
 ## @param namespaceOverride String to fully override `common.names.namespace`
 namespaceOverride: ""
 
-## @section Extra-manifest parameters
+## @section Extra parameters
 
 ## @param releaseNamePrefix Whether to prefix object names with chart fullname
 ## If true (default), object names are rendered as `<fullname>-<name>`.
-## If false, object names use only the provided key from `extraManifests`.
+## If false, object names use only the provided key from `manifests`.
 releaseNamePrefix: true
 
 ## @param commonLabels Labels to add to all rendered objects
@@ -25,9 +25,9 @@ commonLabels: { }
 ## @param commonAnnotations Annotations to add to all rendered objects
 commonAnnotations: { }
 
-## @param extraManifests Object map of user-defined manifests grouped by a first-level key
+## @param manifests Object map of user-defined manifests grouped by a first-level key
 ## Example:
-## extraManifests:
+## manifests:
 ##   secrets:
 ##     token:
 ##       apiVersion: v1
