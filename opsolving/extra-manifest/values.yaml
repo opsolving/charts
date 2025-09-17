@@ -32,4 +32,4 @@ commonAnnotations: { }
 ##     token:
 ##       apiVersion: v1
 ##       kind: Secret
-extraManifests: {}
+manifests: {}

@@ -17,7 +17,7 @@ tests:
       fullnameOverride: ""
       commonLabels: {}
       commonAnnotations: {}
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -47,7 +47,7 @@ tests:
       fullnameOverride: ""
       commonLabels: {}
       commonAnnotations: {}
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -73,7 +73,7 @@ tests:
       fullnameOverride: katana
       commonLabels: {}
       commonAnnotations: {}
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -99,7 +99,7 @@ tests:
       fullnameOverride: katana
       commonLabels: {}
       commonAnnotations: {}
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -125,7 +125,7 @@ tests:
       fullnameOverride: ""
       commonLabels: {}
       commonAnnotations: {}
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -151,7 +151,7 @@ tests:
       fullnameOverride: ""
       commonLabels: {}
       commonAnnotations: {}
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -177,7 +177,7 @@ tests:
       fullnameOverride: katana
       commonLabels: {}
       commonAnnotations: {}
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -203,7 +203,7 @@ tests:
       fullnameOverride: katana
       commonLabels: {}
       commonAnnotations: {}
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -230,7 +230,7 @@ tests:
       fullnameOverride: ""
       commonLabels: {}
       commonAnnotations: {}
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -257,7 +257,7 @@ tests:
         team: platform
         tier: backend
       commonAnnotations: {}
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -286,7 +286,7 @@ tests:
       commonAnnotations:
         owner: ops
         note: shared
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -317,7 +317,7 @@ tests:
       commonLabels: {}
       commonAnnotations: {}
       namespaceOverride: ""
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -344,7 +344,7 @@ tests:
       commonLabels: {}
       commonAnnotations: {}
       namespaceOverride: ""
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -371,7 +371,7 @@ tests:
       commonLabels: {}
       commonAnnotations: {}
       namespaceOverride: ""
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -398,7 +398,7 @@ tests:
       commonLabels: {}
       commonAnnotations: {}
       namespaceOverride: ""
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -425,7 +425,7 @@ tests:
       commonLabels: {}
       commonAnnotations: {}
       namespaceOverride: ""
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -452,7 +452,7 @@ tests:
       commonLabels: {}
       commonAnnotations: {}
       namespaceOverride: ""
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -478,7 +478,7 @@ tests:
       fullnameOverride: ""
       commonLabels: {}
       commonAnnotations: {}
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -505,7 +505,7 @@ tests:
       commonAnnotations:
         note: common
         owner: ops
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -533,7 +533,7 @@ tests:
       name: extra
     set:
       namespaceOverride: forced-ns
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -554,7 +554,7 @@ tests:
       namespace: prod
     set:
       releaseNamePrefix: true
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -573,7 +573,7 @@ tests:
       namespace: prod
     set:
       releaseNamePrefix: true
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -597,7 +597,7 @@ tests:
     set:
       releaseNamePrefix: false
       namespaceOverride: team-b
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -622,7 +622,7 @@ tests:
       commonLabels: {}
       commonAnnotations: {}
       namespaceOverride: ""
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1
@@ -649,7 +649,7 @@ tests:
       commonLabels: {}
       commonAnnotations: {}
       namespaceOverride: ""
-      extraManifests:
+      manifests:
         secrets:
           token:
             apiVersion: v1

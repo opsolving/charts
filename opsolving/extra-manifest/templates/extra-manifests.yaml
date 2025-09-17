@@ -7,7 +7,7 @@ SPDX-License-Identifier: APACHE-2.0
 {{- $ns := include "common.names.namespace" $root -}}
 {{- $stdLabels := (include "common.labels.standard" (dict "customLabels" $root.Values.commonLabels "context" $root) | fromYaml | default (dict)) -}}
 {{- $stdAnn := (include "common.tplvalues.render" ( dict "value" $root.Values.commonAnnotations "context" $root ) | fromYaml | default (dict)) -}}
-{{- with $root.Values.extraManifests }}
+{{- with $root.Values.manifests }}
 {{- range $_, $group := . }}
 {{- range $name, $item := $group }}
 ---
