@@ -6,10 +6,10 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 2.31.4
-    created: "2025-09-12T00:16:04.222814+02:00"
+    created: "2025-09-17T22:41:20.290607+02:00"
     description: A Library Helm Chart for grouping common logic between bitnami charts.
       This chart is not deployable by itself.
-    digest: 7da14432e42457988ce7b72554a63a1b24048e913e0b1dad6989555e5c67b9f3
+    digest: fe4d1f82dd1e273142f975be90954e2e1cbdd1046e78ca00345f714d1d23e1e3
     home: https://bitnami.com
     icon: https://dyltqmyl993wv.cloudfront.net/downloads/logos/bitnami-mark.png
     keywords:
@@ -28,19 +28,19 @@ entries:
     urls:
     - https://opsolving.github.io/charts/common-2.31.4.tgz
     version: 2.31.4
-  extra-manifest:
+  extra:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-09-12T00:16:04.224201+02:00"
+    created: "2025-09-17T22:41:20.291361+02:00"
     dependencies:
     - name: common
       repository: https://opsolving.github.io/charts/
       version: 2.x.x
     description: A Helm chart for Kubernetes
-    digest: 32755c6f4b56005b9dff7a282403d566aa234a20d6f1e7c2308422ee95f25452
-    name: extra-manifest
+    digest: e1611ebd2a1149af68668b60f0815241fee18c2d0ca512952d64fdecca846a98
+    name: extra
     type: application
     urls:
-    - https://opsolving.github.io/charts/extra-manifest-1.0.0.tgz
+    - https://opsolving.github.io/charts/extra-1.0.0.tgz
     version: 1.0.0
-generated: "2025-09-12T00:16:04.222058+02:00"
+generated: "2025-09-17T22:41:20.289911+02:00"

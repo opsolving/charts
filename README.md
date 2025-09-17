@@ -11,15 +11,9 @@ helm repo update
 helm search repo opsolving
 ```
 
-## Descriptions
+## Extra Manifest
 
-### Tests
-
-```bash
-helm-unittest . -f tests/extra-manifests_test.yaml
-```
-
-## Naming Table
+### `Naming Table`
 
 | Chart Name | .Release.Name | nameOverride | fullnameOverride | Resource Name      | Labels / Selecor                                                    |
 |------------|---------------|--------------|------------------|--------------------|---------------------------------------------------------------------|
@@ -31,3 +25,11 @@ helm-unittest . -f tests/extra-manifests_test.yaml
 | extra      | katana        | foo          |                  | katana-foo-token   | app.kubernetes.io/instance: katana<br>app.kubernetes.io/name: foo   |
 | extra      | katana        |              | katana           | katana-token       | app.kubernetes.io/instance: katana<br>app.kubernetes.io/name: extra |
 | extra      | katana        | foo          | katana           | katana-token       | app.kubernetes.io/instance: katana<br>app.kubernetes.io/name: foo   |
+
+### Test for `Naming Table`
+
+```bash
+helm-unittest \
+    opsolving/extra-manifest/ \
+    -f tests/extra-manifests_test.yaml
+```
