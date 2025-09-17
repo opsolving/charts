@@ -3,7 +3,7 @@
 
 suite: extra-manifests
 templates:
-  - templates/extra-manifests.yaml
+  - templates/manifests.yaml
 
 tests:
   # README row: extra | extra | - | - -> name: extra-token; labels: instance: extra, name: extra
