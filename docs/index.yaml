@@ -1,0 +1,46 @@
+apiVersion: v1
+entries:
+  common:
+  - annotations:
+      category: Infrastructure
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 2.31.4
+    created: "2025-09-17T23:30:24.994929+02:00"
+    description: A Library Helm Chart for grouping common logic between bitnami charts.
+      This chart is not deployable by itself.
+    digest: 06c44bd64d56312ba082b680e3ad491c821f118f7b5c3ccb457efb136d7b3dd6
+    home: https://bitnami.com
+    icon: https://dyltqmyl993wv.cloudfront.net/downloads/logos/bitnami-mark.png
+    keywords:
+    - common
+    - helper
+    - template
+    - function
+    - bitnami
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: common
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/common
+    type: library
+    urls:
+    - https://opsolving.github.io/charts/common-2.31.4.tgz
+    version: 2.31.4
+  extra:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-09-17T23:30:24.996939+02:00"
+    dependencies:
+    - name: common
+      repository: https://opsolving.github.io/charts/
+      version: 2.x.x
+    description: A Helm chart for Kubernetes
+    digest: 550e7108159e319cf519a181f9a8ff613dd52821479bba913e2c6ff148daf188
+    name: extra
+    type: application
+    urls:
+    - https://opsolving.github.io/charts/extra-1.0.0.tgz
+    version: 1.0.0
+generated: "2025-09-17T23:30:24.994227+02:00"
