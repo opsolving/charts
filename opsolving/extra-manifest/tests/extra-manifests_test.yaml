@@ -590,6 +590,50 @@ tests:
       - hasDocuments:
           count: 2
 
+  # Object-provided metadata.name/namespace are overridden for map items
+  - it: overrides object metadata.name and metadata.namespace for map items
+    release:
+      name: extra
+      namespace: prod
+    set:
+      releaseNamePrefix: true
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+            metadata:
+              name: should-be-overridden
+              namespace: should-be-overridden-too
+    asserts:
+      - equal:
+          path: metadata.name
+          value: extra-token
+      - equal:
+          path: metadata.namespace
+          value: prod
+
+  # prefix=false still honors namespaceOverride
+  - it: prefix=false with namespaceOverride sets target namespace
+    release:
+      name: extra
+      namespace: prod
+    set:
+      releaseNamePrefix: false
+      namespaceOverride: team-b
+      extraManifests:
+        secrets:
+          token:
+            apiVersion: v1
+            kind: Secret
+    asserts:
+      - equal:
+          path: metadata.name
+          value: token
+      - equal:
+          path: metadata.namespace
+          value: team-b
+
   # PF7: Release katana | nameOverride - | fullnameOverride katana
   - it: prefix=false PF7 - release different, fullnameOverride only
     release:
