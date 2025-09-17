@@ -4,10 +4,10 @@
 ## @section Global parameters
 
 ## @param nameOverride String to partially override `common.names.fullname`
-nameOverride: "foo"
+nameOverride: ""
 
 ## @param fullnameOverride String to fully override `common.names.fullname`
-fullnameOverride: "katana"
+fullnameOverride: ""
 
 ## @param namespaceOverride String to fully override `common.names.namespace`
 namespaceOverride: ""
